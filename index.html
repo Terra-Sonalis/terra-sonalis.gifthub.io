@@ -1,254 +1,79 @@
-export default function MassagepraxisBiancaNeuWebsite() {
-  const services = [
-    {
-      title: "Ganzkörpermassage",
-      duration: "60 oder 90 Minuten",
-      price: "60 Min: 50 € | 90 Min: 75 €",
-      description: "Eine tiefenentspannende Behandlung, die Körper und Geist in Einklang bringt und neue Energie schenkt.",
-      bonus: "🎁 Nur für kurze Zeit: Bei 6 gebuchten Massagen erhalten Sie 30 Minuten gratis dazu.",
-      image:
-        "https://cdn.pixabay.com/photo/2023/10/28/11/21/ai-generated-8347190_1280.png",
-    },
-    {
-      title: "Klassische Massage",
-      duration: "30 oder 60 Minuten",
-      price: "30 Min: 30 € | 60 Min: 50 €",
-      description: "Sanfte, gezielte Griffe lösen Verspannungen und fördern nachhaltig Ihr körperliches Wohlbefinden.",
-      image:
-        "https://media.istockphoto.com/id/1590247404/de/foto/anonymer-masseur-massiert-den-r%C3%BCcken-einer-nicht-wiederzuerkennenden-frau.jpg?s=2048x2048&w=is&k=20&c=JL34PYcyWLpruUjXjNnbi2QaniP87N66z7EEfasAGVY=",
-    },
-    {
-      title: "Gesichtsmassage",
-      duration: "30 Minuten",
-      price: "30,00 €",
-      description: "Eine wohltuende Auszeit für Haut und Sinne – fördert die Durchblutung und lässt Sie strahlen.",
-      image:
-        "https://cdn.pixabay.com/photo/2024/04/23/16/14/ai-generated-8715617_1280.jpg",
-    },
-    {
-      title: "Fußreflexzonenmassage",
-      duration: "30 Minuten",
-      price: "35,00 €",
-      description: "Aktiviert die Selbstheilungskräfte und bringt den gesamten Körper sanft ins Gleichgewicht.",
-      image:
-        "https://cdn.pixabay.com/photo/2017/05/02/06/39/foot-massage-2277450_1280.jpg",
-    },
-    {
-      title: "Aromaölmassage",
-      duration: "60 Minuten",
-      price: "60,00 €",
-      description: "Warme, duftende Öle umhüllen Ihre Sinne und sorgen für tiefe Entspannung und innere Balance.",
-      image:
-        "https://cdn.pixabay.com/photo/2023/11/08/06/22/essential-oils-8373959_1280.jpg",
-    },
-    {
-      title: "Hot-Stone-Massage Ganzkörper",
-      duration: "60 Minuten",
-      price: "65,00 €",
-      description: "Heiße Basaltsteine lösen tiefsitzende Verspannungen und schenken intensive Wärme und Ruhe.",
-      image:
-        "https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=1200&q=80",
-    },
-  ];
+<!DOCTYPE html>
 
-  return (
-    <div className="min-h-screen bg-[#120d0b] text-white">
-      <section className="relative overflow-hidden">
-        <div
-          className="h-[70vh] bg-cover bg-center"
-          style={{
-            backgroundImage:
-              "url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1600&q=80')",
-          }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-amber-900/40 to-[#120d0b]" />
-        <div className="absolute bottom-10 left-6 right-6">
-          <h1 className="text-4xl font-semibold text-amber-100 leading-tight">
-            <span className="block">Terra Sonalis</span>
-            <span className="block text-amber-200">Wellnessmassagen</span>
-            <span className="block text-lg font-medium text-amber-100/80 mt-1">
-              by Bianca Neu
-            </span>
-          </h1>
-          <p className="mt-2 text-lg text-amber-200/90">
-            Meine Leidenschaft für ganzheitliches Wohlbefinden
-          </p>
-          <div className="mt-6 flex flex-wrap items-center gap-3">
-            <a
-              href="https://wa.me/491603101976?text=Hallo%20Bianca%2C%20ich%20m%C3%B6chte%20gerne%20einen%20Termin%20vereinbaren."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-full bg-amber-200 px-6 py-3 text-sm font-semibold text-[#2c1b12] shadow-lg transition hover:scale-105"
-            >
-              Jetzt Termin sichern
-            </a>
-            <a
-              href="#ueber-mich"
-              className="rounded-full border border-amber-200/30 px-6 py-3 text-sm font-medium text-amber-100 transition hover:bg-white/5"
-            >
-              Über mich
-            </a>
-          </div>
-          <div className="mt-6 flex flex-wrap gap-3 text-sm">
-            <div className="rounded-full border border-amber-200/15 bg-black/20 px-4 py-2 text-amber-50/90">
-              ⭐ 5.0 Bewertung
-            </div>
-            <div className="rounded-full border border-amber-200/15 bg-black/20 px-4 py-2 text-amber-50/90">
-              Über 100 zufriedene Kunden
-            </div>
-          </div>
-        </div>
-      </section>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Terra Sonalis – Wellnessmassage</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f8f5f2;
+      color: #333;
+    }
+    header {
+      background: #d4a373;
+      color: white;
+      padding: 30px;
+      text-align: center;
+    }
+    section {
+      padding: 20px;
+    }
+    .card {
+      background: white;
+      margin: 15px 0;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 15px;
+      background: #25D366;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
 
-      <section id="ueber-mich" className="p-6 md:p-10">
-        <div className="mx-auto grid max-w-5xl items-center gap-8 rounded-[28px] border border-amber-200/10 bg-gradient-to-br from-[#241814] to-[#140f0d] p-6 md:grid-cols-2 md:p-10">
-          <div>
-            <p className="text-sm uppercase tracking-[0.3em] text-amber-200/70">
-              Über mich
-            </p>
-            <h2 className="mt-2 text-3xl font-semibold text-amber-50">
-              Meine Philosophie
-            </h2>
-            <p className="mt-6 text-base leading-8 text-amber-50/85">
-              Meine Motivation ist es, Menschen ganzheitlich in Einklang zu bringen – Körper,
-              Geist und Seele. Ich möchte Ihnen helfen, dem Alltag zu entfliehen und die Seele
-              baumeln zu lassen. Bei Terra-Sonalis Wellnessmassagen finden Sie einen Ort der Ruhe
-              und Regeneration.
-            </p>
-            <p className="mt-4 text-base leading-8 text-amber-50/85">
-              Bei meiner Arbeit ist es mir besonders wichtig, auf die individuellen Wünsche jedes
-              Einzelnen einzugehen. Gemeinsam finden wir den richtigen Weg zu Ihrem
-              ganzheitlichen Wohlbefinden.
-            </p>
-            <p className="mt-4 text-base leading-8 text-amber-50/85">
-              Mit Feingefühl und Intuition spüre ich Energieblockaden auf und löse diese, um Ihr
-              allgemeines Wohlbefinden nachhaltig zu verbessern.
-            </p>
-          </div>
+<header>
+  <h1>Terra Sonalis</h1>
+  <p>Wellnessmassage by Bianca Neu</p>
+</header>
 
-          <div className="overflow-hidden rounded-[24px] border border-amber-200/10">
-            <img
-              src="https://cdn.pixabay.com/photo/2015/03/23/17/43/relax-686392_1280.jpg"
-              alt="Entspannende Massage in warmer Atmosphäre"
-              className="h-full w-full object-cover brightness-75 sepia-[.25] contrast-105 saturate-90"
-            />
-          </div>
-        </div>
-      </section>
+<section>
+  <h2>Unsere Massagen</h2>
 
-      <section className="px-6 pb-2 md:px-10">
-        <div className="mx-auto grid max-w-5xl gap-4 md:grid-cols-3">
-          <div className="rounded-[22px] border border-amber-200/10 bg-gradient-to-br from-[#241814] to-[#140f0d] p-5">
-            <p className="text-lg font-semibold text-amber-100">Individuelle Behandlungen</p>
-            <p className="mt-2 text-sm leading-7 text-amber-50/75">
-              Jede Massage wird mit Feingefühl auf Ihre persönlichen Bedürfnisse abgestimmt.
-            </p>
-          </div>
-          <div className="rounded-[22px] border border-amber-200/10 bg-gradient-to-br from-[#241814] to-[#140f0d] p-5">
-            <p className="text-lg font-semibold text-amber-100">Ruhige, private Atmosphäre</p>
-            <p className="mt-2 text-sm leading-7 text-amber-50/75">
-              Ein geschützter Ort zum Loslassen, Auftanken und Wohlfühlen fern vom Alltag.
-            </p>
-          </div>
-          <div className="rounded-[22px] border border-amber-200/10 bg-gradient-to-br from-[#241814] to-[#140f0d] p-5">
-            <p className="text-lg font-semibold text-amber-100">Ganzheitlicher Ansatz</p>
-            <p className="mt-2 text-sm leading-7 text-amber-50/75">
-              Körper, Geist und Seele werden in harmonischen Einklang gebracht.
-            </p>
-          </div>
-        </div>
-      </section>
+  <div class="card">
+    <h3>Ganzkörpermassage</h3>
+    <p>60 Minuten – 60€</p>
+    <p>Tiefenentspannung für Körper und Geist.</p>
+  </div>
 
-      <section className="p-6 md:p-10">
-        <h2 className="mb-8 text-3xl text-amber-200">Katalog</h2>
+  <div class="card">
+    <h3>Aromaölmassage</h3>
+    <p>60 Minuten – 60€</p>
+    <p>Luxuriöse Entspannung mit duftenden Ölen.</p>
+  </div>
 
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {services.map((service) => (
-            <div
-              key={service.title}
-              className={`overflow-hidden rounded-2xl border border-amber-200/10 bg-gradient-to-br from-[#2a1d18] to-[#17110f] ${service.title.includes('Ganzkörpermassage') ? 'ring-2 ring-amber-400' : ''}`}
-            >
-              {service.title.includes('Ganzkörpermassage') && (
-                <div className="absolute mt-3 ml-3 rounded-full bg-amber-400 text-black text-xs px-3 py-1 font-semibold shadow">
-                  ⭐ Empfehlung
-                </div>
-              )}
-              {service.image && (
-                <img
-                  src={service.image}
-                  alt={service.title}
-                  className="h-56 w-full object-cover brightness-75 sepia-[.25] contrast-105 saturate-90"
-                />
-              )}
-              <div className="p-4">
-                <h3 className="text-xl font-semibold text-amber-100">{service.title}</h3>
-                <p className="text-sm text-white/70">{service.duration}</p>
-                <p className="mt-2 text-white/70 text-sm">{service.description}</p>
-                {service.bonus && (
-                  <p className="mt-2 text-amber-300 text-sm font-medium">
-                    {service.bonus}
-                  </p>
-                )}
-                <div className="mt-3 flex flex-wrap gap-2">
-                  {service.price.includes('|') ? (
-                    service.price.split('|').map((p, i) => (
-                      <a
-                        key={i}
-                        href={`https://wa.me/491603101976?text=${encodeURIComponent(`Hallo Bianca, ich möchte gerne einen Termin für ${service.title} (${p.trim()}) vereinbaren.`)}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="rounded-full border border-amber-200/30 px-3 py-1 text-sm text-amber-100 transition hover:bg-amber-200 hover:text-[#2c1b12]"
-                      >
-                        {p.trim()}
-                      </a>
-                    ))
-                  ) : (
-                    <a
-                      href={`https://wa.me/491603101976?text=${encodeURIComponent(`Hallo Bianca, ich möchte gerne einen Termin für ${service.title} (${service.price}) vereinbaren.`)}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="rounded-full border border-amber-200/30 px-3 py-1 text-sm text-amber-100 transition hover:bg-amber-200 hover:text-[#2c1b12]"
-                    >
-                      {service.price}
-                    </a>
-                  )}
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
+  <div class="card">
+    <h3>Hot Stone Massage</h3>
+    <p>65€</p>
+    <p>Warme Steine lösen tiefste Verspannungen.</p>
+  </div>
 
-      <section className="p-6 pb-20">
-        <h2 className="mb-4 text-2xl text-amber-200">Kontakt</h2>
-        <p>
-          Am Köpfchen 19
-          <br />
-          66399 Mandelbachtal
-        </p>
-        <p className="mt-2">Termine nur nach Vereinbarung</p>
-        <p className="mt-2 text-amber-200">+49 160 310 1976</p>
-        <a
-          href="https://wa.me/491603101976?text=Hallo%20Bianca%2C%20ich%20m%C3%B6chte%20gerne%20einen%20Termin%20vereinbaren."
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block mt-4 rounded-full bg-green-500 px-6 py-3 text-white font-semibold shadow-lg hover:scale-105 transition"
-        >
-          💬 WhatsApp schreiben
-        </a>
-      </section>
+</section>
 
-      {/* Floating WhatsApp Button */}
-      <a
-        href="https://wa.me/491603101976?text=Hallo%20Bianca%2C%20ich%20m%C3%B6chte%20gerne%20einen%20Termin%20vereinbaren."
-        target="_blank"
-        rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 z-50 flex items-center gap-2 rounded-full bg-green-500 px-5 py-3 text-white font-semibold shadow-2xl hover:scale-110 transition"
-      >
-        💬
-        <span className="hidden sm:inline">WhatsApp</span>
-      </a>
+<section>
+  <h2>Kontakt</h2>
+  <p>📍 Am Köpfchen 19, 56339</p>
+  <p>📞 0160 3101976</p>
+  <a class="btn" href="https://wa.me/491603101976">WhatsApp schreiben</a>
+</section>
 
-    </div>
-  );
-}
+</body>
+</html>
