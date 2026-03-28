@@ -20,63 +20,98 @@ body {
 }
 
 header {
-  background: linear-gradient(rgba(120,70,30,0.45), rgba(120,70,30,0.45)),
-  url('https://cdn.pixabay.com/photo/2023/11/08/06/22/essential-oils-8373959_1280.jpg') center/cover no-repeat;
+  background:
+    linear-gradient(rgba(110, 70, 35, 0.45), rgba(110, 70, 35, 0.45)),
+    url('https://cdn.pixabay.com/photo/2023/11/08/06/22/essential-oils-8373959_1280.jpg') center/cover no-repeat;
   color: white;
   text-align: center;
-  padding: 90px 20px;
+  padding: 110px 20px;
 }
 
 header h1 {
   margin: 0;
-  font-size: 52px;
+  font-size: 54px;
   letter-spacing: 1px;
 }
 
 header p {
-  margin-top: 12px;
+  margin: 14px 0 0;
   font-size: 22px;
 }
 
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 50px 20px;
-}
-
-.intro {
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-.intro h2 {
-  font-size: 34px;
-  margin-bottom: 10px;
+.hero-button {
+  display: inline-block;
+  margin-top: 26px;
+  background: #ffffff;
   color: #8a5a2b;
+  text-decoration: none;
+  padding: 14px 24px;
+  border-radius: 10px;
+  font-weight: bold;
 }
 
-.intro p {
-  max-width: 800px;
+.container {
+  max-width: 1150px;
   margin: 0 auto;
+  padding: 55px 20px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 34px;
+  color: #8a5a2b;
+  margin-bottom: 16px;
+}
+
+.section-text {
+  max-width: 900px;
+  margin: 0 auto 45px;
+  text-align: center;
   font-size: 18px;
+}
+
+.about-box {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  overflow: hidden;
+  margin-bottom: 55px;
+}
+
+.about-image {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  display: block;
+}
+
+.about-content {
+  padding: 30px;
+}
+
+.about-content h2 {
+  margin-top: 0;
+  color: #8a5a2b;
+  font-size: 32px;
 }
 
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
+  gap: 26px;
+  margin-top: 30px;
 }
 
 .card {
   background: white;
-  border-radius: 18px;
+  border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
 .card img {
   width: 100%;
-  height: 220px;
+  height: 230px;
   object-fit: cover;
   display: block;
 }
@@ -86,8 +121,7 @@ header p {
 }
 
 .card h3 {
-  margin-top: 0;
-  margin-bottom: 8px;
+  margin: 0 0 8px;
   color: #8a5a2b;
   font-size: 24px;
 }
@@ -99,35 +133,35 @@ header p {
 }
 
 .bonus {
-  margin-top: 12px;
-  padding: 10px 12px;
+  margin-top: 14px;
   background: #f7ede2;
+  padding: 12px;
   border-left: 4px solid #c48a4a;
   border-radius: 8px;
   font-size: 15px;
 }
 
-.contact {
+.contact-box {
   margin-top: 60px;
   background: white;
-  border-radius: 18px;
-  padding: 35px;
+  border-radius: 20px;
+  padding: 36px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.08);
   text-align: center;
 }
 
-.contact h2 {
+.contact-box h2 {
   margin-top: 0;
   color: #8a5a2b;
   font-size: 32px;
 }
 
-.contact p {
+.contact-box p {
   font-size: 18px;
   margin: 10px 0;
 }
 
-.btn {
+.whatsapp-btn {
   display: inline-block;
   margin-top: 18px;
   background: #25D366;
@@ -147,12 +181,20 @@ footer {
 }
 
 @media (max-width: 700px) {
+  header {
+    padding: 80px 20px;
+  }
+
   header h1 {
-    font-size: 38px;
+    font-size: 40px;
   }
 
   header p {
     font-size: 18px;
+  }
+
+  .about-image {
+    height: 250px;
   }
 }
 ```
@@ -164,19 +206,39 @@ footer {
   <header>
     <h1>Terra Sonalis</h1>
     <p>Wellnessmassage by Bianca Neu</p>
+    <a class="hero-button" href="https://wa.me/491603101976" target="_blank">Jetzt Termin anfragen</a>
   </header>
 
   <div class="container">
-    <section class="intro">
-      <h2>Entspannung für Körper und Seele</h2>
-      <p>
-        Willkommen bei Terra Sonalis. Genießen Sie wohltuende Massagen in stilvoller Atmosphäre
-        und schenken Sie sich eine Auszeit voller Ruhe, Wärme und neuer Energie.
-      </p>
-    </section>
 
 ```
 <section>
+  <h2 class="section-title">Willkommen bei Terra Sonalis</h2>
+  <p class="section-text">
+    Meine Leidenschaft ist es, Menschen ganzheitlich in Einklang zu bringen – Körper, Geist und Seele.
+    Gönnen Sie sich eine wohltuende Auszeit und erleben Sie Wellnessmassagen in einer ruhigen,
+    warmen und stilvollen Atmosphäre.
+  </p>
+</section>
+
+<section class="about-box">
+  <img class="about-image" src="https://images.unsplash.com/photo-1600334129128-685c5582fd53?auto=format&fit=crop&w=1200&q=80" alt="Wellness Atmosphäre">
+  <div class="about-content">
+    <h2>Meine Philosophie</h2>
+    <p>
+      Bei meiner Arbeit ist es mir besonders wichtig, auf die individuellen Wünsche jedes Einzelnen einzugehen.
+      Gemeinsam finden wir den richtigen Weg zu Ihrem ganzheitlichen Wohlbefinden.
+    </p>
+    <p>
+      Mit Feingefühl und Intuition spüre ich Energieblockaden auf und löse diese, um Ihr allgemeines
+      Wohlbefinden nachhaltig zu verbessern.
+    </p>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">Unsere Massagen</h2>
+
   <div class="cards">
 
     <div class="card">
@@ -185,8 +247,7 @@ footer {
         <h3>Ganzkörpermassage</h3>
         <div class="price">60 Minuten – 60 €</div>
         <p>
-          Eine tiefenentspannende Behandlung, die Körper und Geist in Einklang bringt
-          und neue Energie schenkt.
+          Eine tiefenentspannende Behandlung, die Körper und Geist in Einklang bringt und neue Energie schenkt.
         </p>
         <div class="bonus">
           Bonus: Bei 6 gebuchten Massagen erhalten Sie 30 Minuten gratis dazu.
@@ -200,8 +261,7 @@ footer {
         <h3>Aromaölmassage</h3>
         <div class="price">60 Minuten – 60 €</div>
         <p>
-          Warme, duftende Öle umhüllen Ihre Sinne und sorgen für tiefe Entspannung
-          sowie ein luxuriöses Wohlfühlerlebnis.
+          Warme, duftende Öle umhüllen Ihre Sinne und schenken tiefe Entspannung sowie ein luxuriöses Wohlfühlerlebnis.
         </p>
       </div>
     </div>
@@ -212,8 +272,7 @@ footer {
         <h3>Hot Stone Massage</h3>
         <div class="price">65 €</div>
         <p>
-          Heiße Basaltsteine lösen tief sitzende Verspannungen und schenken intensive
-          Wärme, Ruhe und Regeneration.
+          Heiße Basaltsteine lösen tief sitzende Verspannungen und schenken intensive Wärme, Ruhe und Regeneration.
         </p>
       </div>
     </div>
@@ -221,11 +280,12 @@ footer {
   </div>
 </section>
 
-<section class="contact">
+<section class="contact-box">
   <h2>Kontakt</h2>
   <p>📍 Am Köpfchen 19, 56339</p>
   <p>📞 0160 3101976</p>
-  <a class="btn" href="https://wa.me/491603101976" target="_blank">Termin per WhatsApp anfragen</a>
+  <p>Termine nur nach Vereinbarung</p>
+  <a class="whatsapp-btn" href="https://wa.me/491603101976" target="_blank">Termin per WhatsApp anfragen</a>
 </section>
 ```
 
