@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="de">
 <head>
   <meta charset="UTF-8">
@@ -7,384 +8,228 @@
   <style>
     * {
       box-sizing: border-box;
-      scroll-behavior: smooth;
     }
 
-    body {
-      margin: 0;
-      font-family: "Segoe UI", Arial, sans-serif;
-      background: #f7f2eb;
-      color: #2f2925;
-      line-height: 1.6;
-    }
+```
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f8f3ed;
+  color: #2f2a26;
+  line-height: 1.6;
+}
 
-    header {
-      min-height: 88vh;
-      background:
-        linear-gradient(rgba(58, 33, 18, 0.45), rgba(58, 33, 18, 0.45)),
-        url('relax-686392_1280.jpg') center/cover no-repeat;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 30px 20px;
-      text-align: center;
-      color: white;
-    }
+header {
+  background: linear-gradient(rgba(120,70,30,0.45), rgba(120,70,30,0.45)),
+  url('https://cdn.pixabay.com/photo/2023/11/08/06/22/essential-oils-8373959_1280.jpg') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 90px 20px;
+}
 
-    .hero-box {
-      max-width: 800px;
-      background: rgba(0, 0, 0, 0.22);
-      padding: 40px 28px;
-      border-radius: 20px;
-      backdrop-filter: blur(2px);
-    }
+header h1 {
+  margin: 0;
+  font-size: 52px;
+  letter-spacing: 1px;
+}
 
-    .hero-box h1 {
-      font-size: 56px;
-      margin: 0 0 10px;
-      letter-spacing: 0.5px;
-    }
+header p {
+  margin-top: 12px;
+  font-size: 22px;
+}
 
-    .hero-box p {
-      font-size: 22px;
-      margin: 0 0 18px;
-    }
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 50px 20px;
+}
 
-    .hero-text {
-      font-size: 17px;
-      max-width: 640px;
-      margin: 0 auto;
-      color: #f7eee6;
-    }
+.intro {
+  text-align: center;
+  margin-bottom: 50px;
+}
 
-    .button {
-      display: inline-block;
-      margin-top: 28px;
-      padding: 14px 26px;
-      border-radius: 12px;
-      background: #b67a45;
-      color: white;
-      text-decoration: none;
-      font-weight: 700;
-      box-shadow: 0 8px 18px rgba(0,0,0,0.15);
-      transition: 0.25s ease;
-    }
+.intro h2 {
+  font-size: 34px;
+  margin-bottom: 10px;
+  color: #8a5a2b;
+}
 
-    .button:hover {
-      background: #9e6738;
-      transform: translateY(-2px);
-    }
+.intro p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 18px;
+}
 
-    section {
-      max-width: 1180px;
-      margin: 0 auto;
-      padding: 70px 20px;
-    }
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
 
-    .section-light {
-      background: #fbf7f2;
-    }
+.card {
+  background: white;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
 
-    h2 {
-      font-size: 38px;
-      text-align: center;
-      color: #8b5a33;
-      margin: 0 0 16px;
-    }
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
 
-    .section-intro {
-      max-width: 760px;
-      margin: 0 auto 40px;
-      text-align: center;
-      color: #5e544d;
-      font-size: 17px;
-    }
+.card-content {
+  padding: 22px;
+}
 
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1.1fr 1fr;
-      gap: 34px;
-      align-items: center;
-    }
+.card h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: #8a5a2b;
+  font-size: 24px;
+}
 
-    .about-text {
-      font-size: 17px;
-    }
+.price {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 12px;
+}
 
-    .about-text p {
-      margin-bottom: 18px;
-    }
+.bonus {
+  margin-top: 12px;
+  padding: 10px 12px;
+  background: #f7ede2;
+  border-left: 4px solid #c48a4a;
+  border-radius: 8px;
+  font-size: 15px;
+}
 
-    .about-image img {
-      width: 100%;
-      border-radius: 22px;
-      display: block;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.12);
-    }
+.contact {
+  margin-top: 60px;
+  background: white;
+  border-radius: 18px;
+  padding: 35px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  text-align: center;
+}
 
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-      gap: 26px;
-    }
+.contact h2 {
+  margin-top: 0;
+  color: #8a5a2b;
+  font-size: 32px;
+}
 
-    .card {
-      background: white;
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: 0 12px 28px rgba(0,0,0,0.08);
-      transition: 0.25s ease;
-    }
+.contact p {
+  font-size: 18px;
+  margin: 10px 0;
+}
 
-    .card:hover {
-      transform: translateY(-5px);
-    }
+.btn {
+  display: inline-block;
+  margin-top: 18px;
+  background: #25D366;
+  color: white;
+  text-decoration: none;
+  padding: 14px 24px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 17px;
+}
 
-    .card img {
-      width: 100%;
-      height: 240px;
-      object-fit: cover;
-      display: block;
-    }
+footer {
+  text-align: center;
+  padding: 30px 20px 40px;
+  color: #6f6257;
+  font-size: 14px;
+}
 
-    .card-content {
-      padding: 22px;
-    }
+@media (max-width: 700px) {
+  header h1 {
+    font-size: 38px;
+  }
 
-    .card h3 {
-      margin: 0 0 10px;
-      color: #7c4f2c;
-      font-size: 24px;
-    }
+  header p {
+    font-size: 18px;
+  }
+}
+```
 
-    .price {
-      font-size: 18px;
-      color: #b67a45;
-      font-weight: 700;
-      margin-bottom: 12px;
-    }
-
-    .bonus {
-      margin-top: 14px;
-      padding: 12px 14px;
-      border-radius: 12px;
-      background: #f4e8db;
-      color: #6b4b31;
-      font-size: 14px;
-      font-weight: 600;
-    }
-
-    .contact-wrapper {
-      max-width: 760px;
-      margin: 0 auto;
-    }
-
-    .contact-box {
-      background: white;
-      border-radius: 22px;
-      padding: 34px 24px;
-      text-align: center;
-      box-shadow: 0 12px 28px rgba(0,0,0,0.08);
-    }
-
-    .contact-box p {
-      font-size: 18px;
-      margin: 10px 0;
-    }
-
-    .contact-note {
-      color: #746a63;
-      margin-top: 6px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 26px 20px 40px;
-      font-size: 14px;
-      color: #6f655e;
-    }
-
-    @media (max-width: 900px) {
-      .hero-box h1 {
-        font-size: 42px;
-      }
-
-      .hero-box p {
-        font-size: 19px;
-      }
-
-      .about-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 600px) {
-      header {
-        min-height: 78vh;
-      }
-
-      .hero-box {
-        padding: 28px 18px;
-      }
-
-      .hero-box h1 {
-        font-size: 34px;
-      }
-
-      h2 {
-        font-size: 30px;
-      }
-
-      .card img {
-        height: 210px;
-      }
-    }
   </style>
 </head>
 <body>
 
   <header>
-    <div class="hero-box">
-      <h1>Terra Sonalis</h1>
-      <p>Wellnessmassage by Bianca Neu</p>
-      <div class="hero-text">
-        Gönnen Sie sich eine wohltuende Auszeit und erleben Sie tiefe Entspannung
-        in einer warmen, stilvollen Atmosphäre für Körper, Geist und Seele.
-      </div>
-      <a class="button" href="https://wa.me/491603101976" target="_blank">Jetzt Termin anfragen</a>
-    </div>
+    <h1>Terra Sonalis</h1>
+    <p>Wellnessmassage by Bianca Neu</p>
   </header>
 
-  <section class="section-light">
-    <h2>Willkommen</h2>
-    <p class="section-intro">
-      Bei Terra Sonalis erwartet Sie ein Ort der Ruhe, Entschleunigung und Regeneration.
-      Jede Behandlung wird mit Achtsamkeit, Feingefühl und einem hohen Anspruch an
-      Wohlbefinden und Qualität durchgeführt.
-    </p>
-  </section>
+  <div class="container">
+    <section class="intro">
+      <h2>Entspannung für Körper und Seele</h2>
+      <p>
+        Willkommen bei Terra Sonalis. Genießen Sie wohltuende Massagen in stilvoller Atmosphäre
+        und schenken Sie sich eine Auszeit voller Ruhe, Wärme und neuer Energie.
+      </p>
+    </section>
 
-  <section>
-    <h2>Über mich</h2>
-    <div class="about-grid">
-      <div class="about-text">
+```
+<section>
+  <div class="cards">
+
+    <div class="card">
+      <img src="https://cdn.pixabay.com/photo/2023/10/28/11/21/ai-generated-8347190_1280.png" alt="Ganzkörpermassage">
+      <div class="card-content">
+        <h3>Ganzkörpermassage</h3>
+        <div class="price">60 Minuten – 60 €</div>
         <p>
-          Meine Leidenschaft ist es, Menschen ganzheitlich in Einklang zu bringen –
-          Körper, Geist und Seele. In meiner Arbeit steht der Mensch mit seinen
-          individuellen Bedürfnissen im Mittelpunkt.
+          Eine tiefenentspannende Behandlung, die Körper und Geist in Einklang bringt
+          und neue Energie schenkt.
         </p>
-        <p>
-          Mit Ruhe, Intuition und einem feinen Gespür für Verspannungen und innere
-          Unruhe schaffe ich einen geschützten Raum, in dem Sie loslassen und neue
-          Kraft schöpfen dürfen.
-        </p>
-        <p>
-          Terra Sonalis steht für Wärme, Achtsamkeit und eine besondere Form von
-          Entspannung, die weit über eine klassische Massage hinausgeht.
-        </p>
-      </div>
-      <div class="about-image">
-        <img src="photo-1600334129128-685c5582fd35.avif" alt="Wellness und Entspannung">
-      </div>
-    </div>
-  </section>
-
-  <section class="section-light">
-    <h2>Unsere Massagen</h2>
-    <p class="section-intro">
-      Jede Anwendung ist darauf abgestimmt, Verspannungen zu lösen, Ihre Sinne zu
-      verwöhnen und Ihr inneres Gleichgewicht nachhaltig zu stärken.
-    </p>
-
-    <div class="services-grid">
-      <div class="card">
-        <img src="massage.jpg" alt="Ganzkörpermassage">
-        <div class="card-content">
-          <h3>Ganzkörpermassage</h3>
-          <div class="price">60 Minuten – 60 €</div>
-          <p>
-            Eine tiefenentspannende Behandlung, die den gesamten Körper lockert,
-            die Muskulatur entlastet und ein Gefühl neuer Leichtigkeit schenkt.
-          </p>
-          <div class="bonus">
-            Bonus: Bei 6 gebuchten Massagen erhalten Sie 30 Minuten gratis dazu.
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="essential-oils-8373959_1280.jpg" alt="Aromaölmassage">
-        <div class="card-content">
-          <h3>Aromaölmassage</h3>
-          <div class="price">60 Minuten – 60 €</div>
-          <p>
-            Warme, hochwertige Aromaöle umhüllen Ihre Sinne und sorgen für ein
-            besonders luxuriöses Entspannungserlebnis mit harmonisierender Wirkung.
-          </p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="ai-generated-8715617_1280.jpg" alt="Gesichtsmassage">
-        <div class="card-content">
-          <h3>Gesichtsmassage</h3>
-          <div class="price">30 Minuten – 30 €</div>
-          <p>
-            Sanfte Berührungen lösen Spannungen im Gesichtsbereich, fördern die
-            Durchblutung und schenken Ihnen ein frisches und entspanntes Hautgefühl.
-          </p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="foot-massage-2277450_1280.jpg" alt="Fußreflexzonenmassage">
-        <div class="card-content">
-          <h3>Fußreflexzonenmassage</h3>
-          <div class="price">30 Minuten – 35 €</div>
-          <p>
-            Eine wohltuende Behandlung, die die Selbstheilungskräfte aktiviert,
-            den Energiefluss anregt und das allgemeine Wohlbefinden unterstützt.
-          </p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="ai-generated-8347190_1280.png" alt="Hot Stone Massage">
-        <div class="card-content">
-          <h3>Hot Stone Massage</h3>
-          <div class="price">60 Minuten – 65 €</div>
-          <p>
-            Die angenehme Wärme der Steine dringt tief in die Muskulatur ein,
-            löst festsitzende Verspannungen und schenkt intensive Ruhe und Geborgenheit.
-          </p>
-        </div>
-      </div>
-
-      <div class="card">
-        <img src="relax-686392_1280.jpg" alt="Wellness Atmosphäre">
-        <div class="card-content">
-          <h3>Wellness & Entspannung</h3>
-          <div class="price">Ihre persönliche Auszeit</div>
-          <p>
-            Eine Atmosphäre voller Ruhe, Wärme und Achtsamkeit lädt dazu ein,
-            den Alltag loszulassen und neue Kraft für Körper und Seele zu tanken.
-          </p>
+        <div class="bonus">
+          Bonus: Bei 6 gebuchten Massagen erhalten Sie 30 Minuten gratis dazu.
         </div>
       </div>
     </div>
-  </section>
 
-  <section>
-    <h2>Kontakt</h2>
-    <div class="contact-wrapper">
-      <div class="contact-box">
-        <p>📍 Am Köpfchen 19, 56339</p>
-        <p>📞 0160 3101976</p>
-        <p class="contact-note">Termine nur nach Vereinbarung</p>
-        <a class="button" href="https://wa.me/491603101976" target="_blank">Per WhatsApp buchen</a>
+    <div class="card">
+      <img src="https://cdn.pixabay.com/photo/2023/11/08/06/22/essential-oils-8373959_1280.jpg" alt="Aromaölmassage">
+      <div class="card-content">
+        <h3>Aromaölmassage</h3>
+        <div class="price">60 Minuten – 60 €</div>
+        <p>
+          Warme, duftende Öle umhüllen Ihre Sinne und sorgen für tiefe Entspannung
+          sowie ein luxuriöses Wohlfühlerlebnis.
+        </p>
       </div>
     </div>
-  </section>
+
+    <div class="card">
+      <img src="https://cdn.pixabay.com/photo/2017/05/02/06/39/foot-massage-2277450_1280.jpg" alt="Hot Stone Massage">
+      <div class="card-content">
+        <h3>Hot Stone Massage</h3>
+        <div class="price">65 €</div>
+        <p>
+          Heiße Basaltsteine lösen tief sitzende Verspannungen und schenken intensive
+          Wärme, Ruhe und Regeneration.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="contact">
+  <h2>Kontakt</h2>
+  <p>📍 Am Köpfchen 19, 56339</p>
+  <p>📞 0160 3101976</p>
+  <a class="btn" href="https://wa.me/491603101976" target="_blank">Termin per WhatsApp anfragen</a>
+</section>
+```
+
+  </div>
 
   <footer>
     © Terra Sonalis – Wellnessmassage by Bianca Neu
@@ -392,4 +237,3 @@
 
 </body>
 </html>
- 
